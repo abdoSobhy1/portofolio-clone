@@ -227,10 +227,6 @@ main article:nth-child(4) .article-image-section {
     background-image: url(../imgs/temp3.png);
 }
 
-main article .article-image-section.about-sec {
-    background-image: url(../imgs/me.jpg);
-}
-
 main article .article-name-section,
 main article .article-title-section {
     align-items: center;

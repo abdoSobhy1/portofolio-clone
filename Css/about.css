@@ -11,6 +11,10 @@ main .about-article {
     flex-basis: calc(100% * (2 / 3));
 }
 
+main article .article-image-section.about-sec {
+    background-image: url(../imgs/me.jpg);
+}
+
 main article .article-about-section {
     width: calc(100% * (1 / 3));
     display: flex;
