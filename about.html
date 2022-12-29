@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/all.min.css">
     <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/about.css">
     <script src="Js/script.js" defer></script>
     <title>Cool Site | About</title>
 </head>
@@ -43,20 +44,22 @@
             <i class="fa-solid fa-bars"></i>
         </button>
     </nav>
-    <main>
-        <article>
-            <div class="article-image-section article-section"></div>
-            <div class="article-description-section article-section">
-                <p>Redesigning YouTube ui based on a design found online</p>
-            </div>
-            <div class="article-name-section article-section">
+    <main id="swup" class="transition-fade">
+        <article class="about-article">
+            <div class="article-image-section article-section about-sec"></div>
+            <div class="article-about-section article-section">
                 <h2>AbdelRahman Sobhy</h2>
-            </div>
-            <div class=" article-section">
-
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel perspiciatis numquam optio doloribus,
+                    repellendus possimus.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quidem?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quidem?</p>
             </div>
         </article>
     </main>
+    <script src="js/swup.js"></script>
+    <script>
+        const swup = new Swup();
+    </script>
 </body>
 
 </html>

@@ -54,6 +54,6 @@ const handleNavToggle = () => {
 
 window.matchMedia("(max-width: 762px)").onchange = (e) => {
   nav.dataset.transitionable = "false";
-
+  mNav.style.display = "flex";
   nav.dataset.toggled = "false";
 };
