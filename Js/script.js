@@ -35,14 +35,24 @@ const handleRightClick = () => {
 };
 
 const nav = document.querySelector("nav");
+const mNav = document.querySelector("#nav-mobile-section");
 
 const handleNavToggle = () => {
   nav.dataset.transitionable = "true";
-
-  nav.dataset.toggled = nav.dataset.toggled === "true" ? "false" : "true";
+  if (nav.dataset.toggled === "true") {
+    nav.dataset.toggled = "false";
+    setTimeout(() => {
+      mNav.style.display = "none";
+    }, 300);
+  } else {
+    mNav.style.display = "grid";
+    setTimeout(() => {
+      nav.dataset.toggled = "true";
+    }, 3);
+  }
 };
 
-window.matchMedia("(max-width: 800px)").onchange = (e) => {
+window.matchMedia("(max-width: 762px)").onchange = (e) => {
   nav.dataset.transitionable = "false";
 
   nav.dataset.toggled = "false";

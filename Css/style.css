@@ -19,6 +19,12 @@ body {
     overflow: hidden;
 }
 
+@media (max-width:768px) {
+    body {
+        height: 100dvh;
+    }
+}
+
 h1,
 h2,
 h3,
@@ -295,14 +301,16 @@ main>article>.article-nav-section>button:nth-child(2):is(:focus, :hover) i {
 
     #nav-mobile-section {
         display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: repeat(3, 1fr);
         justify-content: start;
         background-color: var(--bg-color);
-        height: 100vh;
+        height: 100dvh;
         width: 100vw;
         position: fixed;
         transform: translateX(100%);
-        padding-left: 3rem;
-        padding-top: 8rem;
+        padding-left: 2rem;
+        padding-top: 4rem;
     }
 
     #nav-toggle-button {
@@ -327,10 +335,13 @@ main>article>.article-nav-section>button:nth-child(2):is(:focus, :hover) i {
         font-size: 3rem;
     }
 
+    main {
+        width: 100%;
+    }
+
     main article {
         grid-template-columns: 1fr;
         grid-template-rows: 2.5fr 1fr 1.5fr 1.25fr;
-        width: 100%;
     }
 
     main article .article-title-section {
@@ -339,12 +350,12 @@ main>article>.article-nav-section>button:nth-child(2):is(:focus, :hover) i {
 
     main article .article-title-section h2 {
         flex-basis: 70%;
-        font-size: 2.75rem;
+        font-size: 1.75rem;
         line-height: 2.5rem;
     }
 
     main article .article-title-section i {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     main article .article-description-section {
@@ -353,5 +364,10 @@ main>article>.article-nav-section>button:nth-child(2):is(:focus, :hover) i {
 
     main article .article-description-section p {
         font-size: 1.5rem;
+    }
+
+    main article .article-description-section,
+    main article .article-nav-section {
+        border-left: none;
     }
 }
